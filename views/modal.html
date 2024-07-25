@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .container {
+      margin-top: 20px;
+    }
+    .card {
+      margin-bottom: 20px;
+      border: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+    .card-body {
+      padding: 20px;
+    }
+    .card-title {
+      margin-bottom: 15px;
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #333;
+    }
+    .form-control {
+      border-radius: 8px;
+      box-shadow: none;
+      border: 1px solid #ddd;
+      transition: all 0.3s ease;
+    }
+    .form-control:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+    }
+    .btn-group {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 20px;
+    }
+    .form-row {
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Client details</h5>
+            <form>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" placeholder="First name">
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" placeholder="Last name">
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Phone">
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email (optional)">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Job details</h5>
+            <form>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <select class="form-control">
+                    <option>Job type</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <select class="form-control">
+                    <option>Job source</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" rows="3" placeholder="Job description (optional)"></textarea>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Service location</h5>
+            <form>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Address">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="City">
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" placeholder="State">
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" placeholder="Zip code">
+                </div>
+              </div>
+              <div class="form-group">
+                <select class="form-control">
+                  <option>Area</option>
+                </select>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Scheduled</h5>
+            <form>
+              <div class="form-group">
+                <input type="date" class="form-control" placeholder="Start date">
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="time" class="form-control" placeholder="Start time">
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="time" class="form-control" placeholder="End time">
+                </div>
+              </div>
+              <div class="form-group">
+                <select class="form-control">
+                  <option>Test select</option>
+                </select>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-secondary">Cancel</button>
+      <button type="button" class="btn btn-primary ml-2">Submit</button>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
