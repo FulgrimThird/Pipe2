@@ -1,6 +1,6 @@
 const passport = require('passport');
 const OAuth2Strategy = require('passport-oauth2');
-const request = require('request-promise');
+const axios = require('axios');
 
 require('dotenv').config();
 
@@ -13,13 +13,12 @@ passport.use(new OAuth2Strategy({
   },
   async (accessToken, refreshToken, profile, done) => {
     try {
-      const userInfo = await request({
-        url: 'https://api.pipedrive.com/v1/users/me',
+      const response = await axios.get('https://api.pipedrive.com/v1/users/me', {
         headers: {
           'Authorization': `Bearer ${accessToken}`
-        },
-        json: true
+        }
       });
+      const userInfo = response.data;
       profile.accessToken = accessToken;
       profile.refreshToken = refreshToken;
       profile.userInfo = userInfo.data;
